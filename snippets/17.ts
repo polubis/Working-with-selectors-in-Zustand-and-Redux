@@ -7,6 +7,6 @@ const getFibonacci = createSelector([getCounter], (counter) =>
 );
 
 const counter_selectors = {
-  counter: useCounterStore(getCounter),
+  counter: () => useCounterStore(getCounter),
   fib: () => useCounterStore(getFibonacci)
 };
